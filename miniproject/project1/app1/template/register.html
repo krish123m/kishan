@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static '/css/register.css'%}">
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2>Register</h2>
+        <div>
+            <label>User Name</label>
+            <input type="text" name="username" placeholder="Enter your username" required>
+        </div></br>
+        <div>
+            <label>First Name</label>
+            <input type="text" name="firstname" placeholder="Enter your first name" required>
+        </div></br>
+        <div>
+            <label>Last Name</label>
+            <input type="text" name="lastname" placeholder="Enter your last name" required>
+        </div><br>
+        <div>
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="Enter your email address" required>
+        </div><br>
+        <div>
+            <label>Password</label>
+            <input type="password" name="pass1" placeholder="Enter your password" required>
+        </div><br>
+        <div>
+            <label>Confirm Password</label>
+            <input type="password" name="pass2" placeholder="Confirm your password" required>
+        </div><br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
